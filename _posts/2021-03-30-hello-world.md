@@ -25,4 +25,4 @@ int main(){
 }
 ```
 
-![image-20231109221046535](/../blog/assets/blog_res/2021-03-30-hello-world.assets/image-20231109221046535.png)
+![image-20231109223816624](/assets/blog_res/2021-03-30-hello-world.assets/image-20231109223816624.png)
