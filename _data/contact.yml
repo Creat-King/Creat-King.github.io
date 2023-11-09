@@ -3,12 +3,14 @@
 -
   type: github
   icon: 'fab fa-github'
+  link: "https://github.com/Creat-King"
 -
   type: twitter
   icon: 'fab fa-twitter'
 -
   type: email
   icon: 'fas fa-envelope'
+  link: "2358626811@qq.com"
   noblank: true            # open link in current tab
 -
   type: rss
