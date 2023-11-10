@@ -1,5 +1,5 @@
 ---
-title: first blog！
+title: first blog!！
 date: 2022-03-26 10:34:00 +0800
 categories: [随笔]
 tags: [生活]
