@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="大数据可视化考试复习">
+<meta name="author" content="pai">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="*大数据可视化*">
+<meta property="og:description" content="*大数据可视化*">
+<link rel="canonical" href="/posts/%E6%96%87%E6%A1%88/">
+<meta property="og:url" content="/posts/%E6%96%87%E6%A1%88/">
+<meta property="og:site_name" content="炸串儿的小屋">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2023-11-10T08:14:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="大数据可视化考试复习">
+<meta name="twitter:site" content="@twitter_username">
+<meta name="twitter:creator" content="@pai"> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"pai"},"dateModified":"2023-12-12T13:56:01+00:00","datePublished":"2023-11-10T08:14:00+00:00","description":"*大数据可视化*","headline":"大数据可视化考试复习","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/%E6%96%87%E6%A1%88/"},"url":"/posts/%E6%96%87%E6%A1%88/"}</script><title>大数据可视化考试复习 | 炸串儿的小屋</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/favicons/site.webmanifest">
+<link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="炸串儿的小屋">
+<meta name="application-name" content="炸串儿的小屋">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&amp;display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.20.1/dist/tocbot.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1/dist/magnific-popup.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> <script type="text/javascript"> class ModeToggle { static get MODE_KEY() { return "mode"; } static get MODE_ATTR() { return "data-mode"; } static get DARK_MODE() { return "dark"; } static get LIGHT_MODE() { return "light"; } static get ID() { return "mode-toggle"; } constructor() { if (this.hasMode) { if (this.isDarkMode) { if (!this.isSysDarkPrefer) { this.setDark(); } } else { if (this.isSysDarkPrefer) { this.setLight(); } } } let self = this; /* always follow the system prefers */ this.sysDarkPrefers.addEventListener('change', () => { if (self.hasMode) { if (self.isDarkMode) { if (!self.isSysDarkPrefer) { self.setDark(); } } else { if (self.isSysDarkPrefer) { self.setLight(); } } self.clearMode(); } self.notify(); }); } /* constructor() */ get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); } get isSysDarkPrefer() { return this.sysDarkPrefers.matches; } get isDarkMode() { return this.mode === ModeToggle.DARK_MODE; } get isLightMode() { return this.mode === ModeToggle.LIGHT_MODE; } get hasMode() { return this.mode != null; } get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); } /* get the current mode on screen */ get modeStatus() { if (this.isDarkMode || (!this.hasMode && this.isSysDarkPrefer)) { return ModeToggle.DARK_MODE; } else { return ModeToggle.LIGHT_MODE; } } setDark() { $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); } setLight() { $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); } clearMode() { $('html').removeAttr(ModeToggle.MODE_ATTR); sessionStorage.removeItem(ModeToggle.MODE_KEY); } /* Notify another plugins that the theme mode has changed */ notify() { window.postMessage({ direction: ModeToggle.ID, message: this.modeStatus }, "*"); } flipMode() { if (this.hasMode) { if (this.isSysDarkPrefer) { if (this.isLightMode) { this.clearMode(); } else { this.setLight(); } } else { if (this.isDarkMode) { this.clearMode(); } else { this.setDark(); } } } else { if (this.isSysDarkPrefer) { this.setLight(); } else { this.setDark(); } } this.notify(); } /* flipMode() */ } /* ModeToggle */ const modeToggle = new ModeToggle(); </script>
+</head>
+<body data-topbar-visible="true">
+<div id="sidebar" class="d-flex flex-column align-items-end">
+<div class="profile-wrapper text-center">
+<div id="avatar"> <a href="/" class="mx-auto"> <img src="/assets/config/avatar.jpg" alt="avatar" onerror="this.style.display='none'"> </a>
+</div>
+<div class="site-title"> <a href="/">炸串儿的小屋</a>
+</div>
+<div class="site-subtitle font-italic">这里是炸串儿的小屋 ～</div>
+</div>
+<ul class="w-100">
+<li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>首页</span> </a>
+</li>
+<li class="nav-item"> <a href="/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>分类</span> </a>
+</li>
+<li class="nav-item"> <a href="/tags/" class="nav-link"> <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i> <span>标签</span> </a>
+</li>
+<li class="nav-item"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>归档</span> </a>
+</li>
+<li class="nav-item"> <a href="/about/" class="nav-link"> <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i> <span>关于</span> </a>
+</li>
+</ul>
+<div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center"> <button class="mode-toggle btn" aria-label="Switch Mode"> <i class="fas fa-adjust"></i> </button> <span class="icon-border"></span> <a href="https://github.com/Creat-King" aria-label="github" target="_blank" rel="noopener noreferrer"> <i class="fab fa-github"></i> </a> <a href="https://twitter.com/twitter_username" aria-label="twitter" target="_blank" rel="noopener noreferrer"> <i class="fab fa-twitter"></i> </a> <a href="javascript:location.href%20=%20'mailto:'%20+%20['paipchao','gmail.com'].join('@')" aria-label="email"> <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" aria-label="rss"> <i class="fas fa-rss"></i> </a>
+</div>
+</div>
+<div id="topbar-wrapper"><div id="topbar" class="container d-flex align-items-center justify-content-between h-100 pl-3 pr-3 pl-md-4 pr-md-4"> <span id="breadcrumb"> <span> <a href="/"> 首页 </a> </span> <span>大数据可视化考试复习</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> 文章</div>
+<i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="搜索..."> </span> <span id="search-cancel">取消</span>
+</div></div>
+<div id="main-wrapper" class="d-flex justify-content-center">
+<div id="main" class="container pl-xl-4 pr-xl-4">
+<div class="row">
+<div id="core-wrapper" class="col-12 col-lg-11 col-xl-9 pr-xl-4"><div class="post pl-1 pr-1 pl-md-2 pr-md-2">
+<h1 data-toc-skip>大数据可视化考试复习</h1>
+<div class="post-meta text-muted"> <span> 发表于 <em class="" data-ts="1699604040" data-df="YYYY/MM/DD" data-toggle="tooltip" data-placement="bottom"> 2023/11/10 </em> </span> <span> 更新于 <em class="" data-ts="1702389361" data-df="YYYY/MM/DD" data-toggle="tooltip" data-placement="bottom"> 2023/12/12 </em> </span><div class="d-flex justify-content-between"> <span> 作者 <em> <a href=""></a> </em> </span><div> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="6403 字"> <em>35 分钟</em>阅读</span>
+</div>
+</div>
+</div>
+<div class="post-content">
+<h1 id="大数据可视化"><strong><em>*大数据可视化*</em></strong></h1>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps1.png" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps1.png" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<h1 id="题型设置"><strong><em>*题型设置*</em></strong></h1>
+<p><strong>7个论述题 56分</strong></p>
+<p>不要写的太简单</p>
+<p>每章一个知识点（包括云平台）</p>
+<p><strong>3个分析设计题</strong></p>
+<p>matplot+echarts 4中图表，包括组合叠加</p>
+<p>给代码画图形</p>
+<p>matplotlib必考子图</p>
+<p>matplotlib基本样式，（线形、点型）</p>
+<p>echarts基本样式</p>
+<h1 id="ch1"><strong><em>*ch1*</em></strong></h1>
+<p>数据可视化的概念：数据可视化是基于计算机图形学原理和图形图像处理技术，将数据转换成图形或图像呈现出来，并可进一步交互处理的，关于数据视觉表现的理论、方法和技术。</p>
+<p>数据可视化的标准：实用性、完整性、真实性、艺术性、交互性</p>
+<p>面临的挑战：数据呈现形式</p>
+<p>对策：发展了高分、高清晰度、大屏幕拼接可视化技术。结合数据实时绘制技术和GIS空间数据可视化技术，实现了数据的实时图形可视化、场景可视化和实时交互</p>
+<p>o（1）正确认识数据可视化的意义。</p>
+<p>o（2）重视数据的质量。</p>
+<p>o（3）改善数据可视化的硬件条件。</p>
+<p>o（4）重视可视化的评估。</p>
+<p>四个V：</p>
+<p>(1)体量(Volume)：使用数据量很大的数据集开发，并从大数据中获得意义。</p>
+<p>(2)多源(Variety)：开发过程中需要尽可能多的数据源。</p>
+<p>(3)高速(Velocity)：企业不用再分批处理数据，而是可以实时处理全部数据。</p>
+<p>(4)质量(Value)：不仅为用户创建有吸引力的信息图和热点图，还能通过大数据获取意见，创造商业价值。</p>
+<p>• 数据：数据值，数字、符号、图像、音频等</p>
+<p>• 图形：图形一般指在一个二维空间中的若干空间形状，可由计算机绘制的图形有直线、圆、曲线、图标以及各种组合形状等。</p>
+<p>• 数据、图形与可视化：数据可视化可通过对真实数据的采集、清洗、预处理、分析等过程建立数据模型，并最终将数据转换为各种图形，以打造较好的视觉效果。</p>
+<p>数据可视化的分类：</p>
+<p>科学可视化</p>
+<p>信息可视化</p>
+<p>可视化分析</p>
+<p><strong><em>*科学可视化*</em></strong>：科学可视化是数据可视化中的一个应用领域，科学可视化需要对数据和模型进行解释，操作和处理，旨在寻找其中的模式，特点，关系和异常情况。 关注三维空间</p>
+<p><strong><em>*信息可视化*</em></strong>：处理的对象是抽象数据集合，其表现形式通常在二维空间</p>
+<p><strong><em>*可视化分析*</em></strong>：可视化分析是科学可视化与信息可视化领域发展的产物，侧重于借助交互式的用户界面而进行对数据的分析与推理。形成人脑智能和机器智能优势互补和相互提升</p>
+<p>数据可视化的目标：</p>
+<p>从应用角度来看：</p>
+<p>• 有效呈现数据中的重要特征</p>
+<p>• 揭示事物内部客观规律以及数据间的内在联系。</p>
+<p>• 辅助人们理解事物概念和过程。</p>
+<p>• 对模拟和测量进行质量监控</p>
+<p>• 提高科研开发效率。</p>
+<p>从宏观角度看：信息记录、信息分析和信息传播</p>
+<p>数据可视化的作用：</p>
+<p>数据表达、数据操作和数据分析。</p>
+<p>数据可视化的特征：</p>
+<p>功能特征</p>
+<p>使用人群特征</p>
+<p>应用场景特征</p>
+<h1 id="ch2"><strong><em>*ch2*</em></strong></h1>
+<p>波长越短，频率越高，能量越强</p>
+<p>光源分类</p>
+<p>（1）热辐射产生的光，例如太阳光。</p>
+<p>（2）原子跃迁发光，例如荧光灯发光。</p>
+<p>（3）物质内部带电粒子加速运动时所产生的光，例如，同步加速器工作时发出的同步辐射光。</p>
+<p>视错觉</p>
+<p>几何学错觉 由图像本身的构造导致的称为几何学错觉<a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps2.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps2.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p>生理错觉 主要来自人体的视觉适应现象，人的感觉器官在接受过久的刺激后会钝化，产生视觉暂留</p>
+<p>认知错觉 这更多属于认知心理学的讨论范围<a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps3.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps3.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p>色彩分类：原色、间色、复色</p>
+<p>• 原色：色彩中不能再分解的基本色称为原色，红黄蓝</p>
+<p>• 间色：由两个原色混合得间色，橙绿紫</p>
+<p>• 复色：两个间色和其对应的间色、一种原色和其对应的间色混合而成</p>
+<p>色彩冷暖：人的心理联想，暖色、冷色和中性色</p>
+<p>色彩的轻重感：色彩的轻重感主要与色彩的明度有关。色彩的明度主要取决于本身对自然光的反射率。</p>
+<p>色彩的软硬感：色彩的软硬感主要也来自色彩的明度，但与纯度也存在着一定的关系。色彩的纯度取决于它在反射和吸收光时对光谱成分选择的宽窄程度</p>
+<p>色彩的前后感：色彩的前后感是根据人们对色彩距离的感受而划分的类型，一般可分为前进色和后退色，前进色是人们视觉距离短、显得凸出的颜色，反之是后退色。</p>
+<p>可视化编码：几何标记+视觉通道</p>
+<p>几何标记：几何标记是指可视化中常见的一些几何图形元素，例如：点、线、面、体等。</p>
+<p>视觉通道：视觉通道是指用于控制几何标记的展示特性，包括标记的位置、大小、长度、形状、方向、色调、饱和度、亮度等。</p>
+<p>用于定性的和分类性质的视觉通道</p>
+<p>o1）位置o2）色调o3）形状o4）图案o5）方向</p>
+<p>用于定量的或者定序性质的视觉通道</p>
+<p>o1）坐标轴位置o2）尺寸o3）饱和度o4）亮度o5）图案密度</p>
+<p>视觉通道与视觉原理</p>
+<p>o<strong><em>*1.*</em></strong> <strong><em>*潜意识处理*</em></strong></p>
+<p>o<strong><em>*2.*</em></strong> <strong><em>*格式塔视觉原理*</em></strong></p>
+<p>o<strong><em>*3.*</em></strong> <strong><em>*爱德华塔夫特原则*</em></strong></p>
+<p>数据可视化流程</p>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps4.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps4.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p>以数据为基础，数据流为导向的系统流程，包含：</p>
+<p>数据采集：数据可视化的基础是数据，数据可以通过仪器采样、调查记录等方式进行采集</p>
+<p>数据处理：采集得来的原始数据一方面不可避免含有噪声和误差，另一方面数据的模式和特征往往被隐藏。因此，通过数据处理能够保证数据的完整性、有效性、准确性、一致性和可用性。</p>
+<p>可视化映射： 它用于<strong><em>*把不同数据之间的联系映射为可视化视觉通道中的不同元素*</em></strong>，如标记的位置、大小、长度、形状、方向、色调、饱和度、亮度等。</p>
+<p>用户感知：用户从数据的可视化结果中提取有用的信息、知识和灵感。</p>
+<p>数据可视化设计原则</p>
+<p>o1）为用户设计作品</p>
+<p>o 2）为作品的内容分类</p>
+<p>o 3）版式中的元素对齐</p>
+<p>o 4）视觉要素的重复/统一</p>
+<p>o 5）作品内容的对比/强调</p>
+<p>o 6）表述准确、简洁</p>
+<p>数据可视化设计技巧</p>
+<p>建立视觉层次，用醒目的颜色突出数据，淡化其他元素</p>
+<p>高亮显示重点内容</p>
+<p>提升不同区域的色阶跨度</p>
+<p>借助场景来表现数据指标</p>
+<p>将抽象的不易理解的数字转换为容易被人感知的图表</p>
+<p>尽量让图表简洁</p>
+<p>图片格式</p>
+<p>• 矢量图（graphic）：以线段、曲线等图形几何特征来存储信息。</p>
+<p>• 位图（image）：点阵图，由不同颜色的像素点组成。</p>
+<p>数据可视化以数据为基础，以数据流为导向</p>
+<h1 id="ch3"><strong><em>*ch3*</em></strong></h1>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps5.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps5.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps6.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps6.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps7.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps7.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p>这些类图看看PPT吧</p>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps8.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps8.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps9.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps9.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps10.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps10.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps11.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps11.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps12.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps12.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps13.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps13.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p>文本可视化</p>
+<p>流程：文本可视化涵盖了信息收集、文本信息挖掘（数据预处理、数据挖掘、知识表示）、视觉绘制和交互设计等过程。</p>
+<p>实现：</p>
+<p>可视化类型：</p>
+<p>– （1）基于文本内容的可视化。基于文本内容的可视化研究包括基于词频的可视化和基于词汇分布的可视化，<strong><em>*常用的有词云、分布图和 Document Cards*</em></strong> 等。</p>
+<p>– （2）基于文本关系的可视化。基于文本关系的可视化研究文本内外关系，帮助人们理解文本内容和发现规律。<strong><em>*常用的可视化形式有树状图、节点连接的网络图、力导向图、叠式图和 Word Tree 等*</em></strong>。</p>
+<p>– （3）基于多层面信息的可视化。基于多层面信息的可视化主要研究如何结合信息的多个方面帮助用户从更深层次理解文本数据，发现其内在规律。其中，包含时间信息和地理坐标的文本可视化近年来受到越来越多的关注。<strong><em>*常用的有地理热力图、ThemeRiver、SparkClouds、TextFlow 和基于矩阵视图的情感分析可视化等。*</em></strong></p>
+<p>词云</p>
+<p>概念：词云，也称为标签云或是文字云，它是一种典型的文本可视化技术。词云对文本中<strong><em>*出现频率较高的“关键词”予以视觉上的突出*</em></strong>，从而形成“关键词云层”或“关键词渲染”。</p>
+<p>实现：</p>
+<p>网络可视化</p>
+<p>网络可视化通常是展示数据在网络中的关联关系，一般用于描绘互相连接的实体。</p>
+<p>空间信息可视化</p>
+<p>空间信息可视化是指运用计算机图形图像处理技术，将复杂的科学现象和自然景观及一些抽象概念图形化的过程。</p>
+<h1 id="ch4">ch4</h1>
+<h2 id="numpy库">
+<span class="mr-2"><strong><em>*Numpy库*</em></strong></span><a href="#numpy%E5%BA%93" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>ndarray，一个<strong>具有矢量算术运算</strong>和<strong>复杂广播能力</strong>的快速且节省空间的<strong>多维数组</strong>。</p>
+<p>创建数组</p>
+<p>⁣1. 将列表转换为数组 <a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps14.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps14.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p>⁣2. 创建全零全一的数组</p>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps15.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps15.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p>⁣3. 创建随机数组</p>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps16.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps16.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p>arr = np.random.randn(5, 4) # 正态分布的数据</p>
+<p>索引和切片 <a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps17.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps17.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<h2 id="pandas库">
+<span class="mr-2"><strong><em>*Pandas库*</em></strong></span><a href="#pandas%E5%BA%93" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>pandas中有两大核心数据结构：Series（一维数据，键值对形式） 和 DataFrame（多特征数据,既有行索引,又有列索引）</p>
+<p>Series的创建：</p>
+<p>使用Python数组创建</p>
+<p>使用numpy数组创建</p>
+<p>使用python字典创建 <a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps18.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps18.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p>与普通numpy数组相比，可以通过索引的方式选取Series中的单个或一组值 <a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps19.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps19.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p>DataFrame</p>
+<p>创建：构成DataFrame的方法很多，最常用的一种是直接传入一个由等长列表或numpy数组组成的字典</p>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps20.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps20.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<h1 id="ch5-web技术"><strong><em>*ch5 Web技术*</em></strong></h1>
+<h2 id="html5技术基础">
+<span class="mr-2"><strong><em>*HTML5技术基础*</em></strong></span><a href="#html5%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>纯静态网页：&lt;h1&gt;、&lt;p&gt;、<a>、</a><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps21.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps21.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps22.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps22.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps23.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps23.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p>DOM：文档即对象模型；是一种处理HTML和XML文件的标准API。DOM提供了对整个文档的访问模型，将文档作为一个树形结构，树的每个结点表示了一个HTML标签或标签内的文本项。DOM树结构精确地描述了HTML文档中标签间的相互关联性。将HTML或XML文档转化为DOM树的过程称为解析(parse)。对HTML文档的处理可以通过对DOM树（节点对象）的操作（增删查改）实现。</p>
+<h2 id="位图与矢量图">
+<span class="mr-2"><strong><em>*位图与矢量图*</em></strong></span><a href="#%E4%BD%8D%E5%9B%BE%E4%B8%8E%E7%9F%A2%E9%87%8F%E5%9B%BE" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>位图： 点阵图；</p>
+<p>l 最小单位由像素构成的图，缩放会失真。构成位图的最小单位是像素，位图就是由像素阵列的排列来实现其显示效果的。</p>
+<p>l 每个像素都有自己的颜色信息（色相、饱和度、明度）</p>
+<p>l 对图像的操作改变的对象是像素</p>
+<p>l 常见格式：JPG JPEG GIF PNG BMP TIFF</p>
+<p>矢量图：向量图；</p>
+<p>l 缩放不失真</p>
+<p>l 通过记录多个对象的组合生成，每个对象以数学函数实现</p>
+<p>l 矢量图实际上并不是像位图那样纪录画面上每一点的信息，而是记录了元素形状及颜色的算法。</p>
+<p>l 常见格式：WMF SVG AI SWF</p>
+<p>二者对比：</p>
+<p>l 位图的好处是，色彩变化丰富，编辑上，可以改变任何形状的区域的色彩显示效果，相应的，要实现的效果越复杂，需要的象素数越多，图像文件的大小[长宽]和体积[存储空间]越大。（色彩丰富、方便编辑、代价大）</p>
+<p>l 矢量的好处是，轮廓的形状更容易修改和控制，但是对于单独的对象，色彩上变化的实现不如位图来的方便直接。另外，支持矢量格式的应用程序也远远没有支持位图的多，很多矢量图形都需要专门设计的程序才能打开浏览和编辑。（兼容性差、形状控制方便）</p>
+<p>l 矢量图可以很容易的转化成位图，但是位图转化为矢量图却并不简单，往往需要比较复杂的运算和手工调节。</p>
+<p>l 矢量和位图在应用上也是可以相互结合的，比如在矢量文件中嵌入位图实现特别的效果，再比如在三维影象中用矢量建模和位图贴图实现逼真的视觉效果等等。</p>
+<h2 id="html5-canvas和svg技术基础">
+<span class="mr-2"><strong><em>*HTML5 Canvas和SVG技术基础*</em></strong></span><a href="#html5-canvas%E5%92%8Csvg%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>Canvas通过JS绘制2D标量图，像一块幕布，可以绘制各种图表动画；特点有：</p>
+<p>l 绘制的是2D标量图</p>
+<p>l 逐像素渲染</p>
+<p>l 图形一旦绘制完成就不会被浏览器继续关注，如果位置变化就需要将整个场景重新绘制</p>
+<p>l 比传统的JS+Flash绘图方式简单</p>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps24.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps24.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p>Canvas坐标系统，以像素为单位</p>
+<p>SVG （Scalable Vector Graphics）可缩放矢量图，是一种基于 XML 语法的描述二维图形的语言图像格式。SVG 则是属于对图像的形状描述，本质上是文本。特点有：</p>
+<p>l 文本文件，体积小，不失真，是与分辨率无关的矢量图格式</p>
+<p>l 允许三种类型的图像对象：矢量图形、图像和文本</p>
+<p>l 可嵌入网页（DOM）、文件（XML），被CSS使用、转为BASE64编码？？</p>
+<p>二者对比</p>
+<p>Canvas</p>
+<p>l 依赖分辨率</p>
+<p>l 不支持事件处理器</p>
+<p>l 弱的文本渲染能力</p>
+<p>l 能够以 .png 或 .jpg 格式保存结果图像</p>
+<p>l 最适合图像密集型的游戏，其中的许多对象会被频繁重绘</p>
+<p>SVG</p>
+<p>l 不依赖分辨率</p>
+<p>l 支持事件处理器</p>
+<p>l 最适合带有大型渲染区域的应用程序（比如谷歌地图）</p>
+<p>l 复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快）</p>
+<p>l 不适合游戏应用</p>
+<p>Echarts 基于Canvas，适用于数据量比较大的情况。</p>
+<p>Highcharts 基于SVG，方便自己定制，但图表类型有限。</p>
+<h2 id="掌握echarts可视化库">
+<span class="mr-2"><strong><em>*掌握Echarts可视化库*</em></strong></span><a href="#%E6%8E%8C%E6%8F%A1echarts%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>https://echarts.apache.org/zh/option.html#title</p>
+<h2 id="json和web服务端技术">
+<span class="mr-2"><strong><em>*JSON和Web服务端技术*</em></strong></span><a href="#json%E5%92%8Cweb%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%8A%80%E6%9C%AF" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>传统Web问题： 1、系统之间缺乏良好的互操作性</p>
+<p>2、系统内部耦合度较强，应用模式不够灵活</p>
+<p>数据通信格式的对比——<strong>XML和JSON的优缺点对比</strong></p>
+<p>(1).可读性方面。</p>
+<p>JSON和XML的数据可读性基本相同，JSON和XML的可读性可谓不相上下，一边是建议的语法，一边是规范的标签形式，XML可读性较好些。</p>
+<p>(2).可扩展性方面。</p>
+<p>XML天生有很好的扩展性，JSON当然也有，没有什么是XML能扩展，JSON不能的。</p>
+<p>(3).编码难度方面。</p>
+<p>XML有丰富的编码工具，比如Dom4j、JDom等，JSON也有json.org提供的工具，但是JSON的编码明显比XML容易许多，即使不借助工具也能写出JSON的代码，可是要写好XML就不太容易了。</p>
+<p>(4).解码难度方面。</p>
+<p>XML的解析得考虑子节点父节点，让人头昏眼花，而JSON的解析难度几乎为0。这一点XML输的真是没话说。</p>
+<p>(5).流行度方面。</p>
+<p>XML已经被业界广泛的使用，而JSON才刚刚开始，但是在Ajax这个特定的领域，未来的发展一定是XML让位于JSON。</p>
+<p>(6).解析手段方面。</p>
+<p>JSON和XML同样拥有丰富的解析手段。</p>
+<p>(7).数据体积方面。</p>
+<p>JSON相对于XML来讲，数据的体积小，传递的速度更快些。</p>
+<p>(8).数据交互方面。</p>
+<p>JSON与JavaScript的交互更加方便，更容易解析处理，更好的数据交互。</p>
+<p>(9).数据描述方面。</p>
+<p>JSON对数据的描述性比XML较差。</p>
+<p>(10).传输速度方面。</p>
+<p>JSON的速度要远远快于XML。</p>
+<p>RESTful HTTP：表现层状态转移，指的是一组架构约束条件和原则。WEB程序最重要的REST原则是：客户端与服务器之间的交互请求是无状态的。架构特点： oREST属于Web Services技术范畴。</p>
+<p>o（1）每个URI代表一种资源。</p>
+<p>o（2）客户端和服务端之间，传递这种资源的某种表现层。</p>
+<p>o（3）客户端通过四个HTTP动作指令，对服务器端资源进行操作。</p>
+<p>​ GET:用来获取资源；</p>
+<p>​ POST:用来新建资源（也可用于更新资源）；</p>
+<p>​ PUT:用来更新资源；</p>
+<p>​ DELETE:用来删除资源。</p>
+<p>SOA：基于webapi，重要的表现形式是spa 单页应用。可以不用一次请求一个网页，而是api更新数据</p>
+<p>ü封装可以实现重用</p>
+<p>ü采用独立的实现接口描述，容易整合各种应用</p>
+<p>ü由于明确定义了应用系统间的接口，容易实现应用流程模型－－就象搭积木！</p>
+<h1 id="ch6-数据库技术"><strong><em>*ch6 数据库技术*</em></strong></h1>
+<h2 id="结构化数据非结构化数据与半结构化数据">
+<span class="mr-2"><strong><em>*结构化数据、非结构化数据与半结构化数据*</em></strong></span><a href="#%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE%E9%9D%9E%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%8D%8A%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>结构化数据：</p>
+<p>l 概念：由二维表结构来逻辑表达和实现的数据，也称为行数据</p>
+<p>l 特点：数据以行为单位，一行数据表示一个实体的信息，每一行数据的属性是相同的</p>
+<p>非结构化数据：</p>
+<p>l 概念：数据结构不规则或不完整，没有任何预定义的数据模型，不方便用二维逻辑表来表现的数据</p>
+<p>l 举例：（Word）、文本、图片、HTML、各类报表、视频音频等。</p>
+<p>半结构化数据：</p>
+<p>介于结构化与非结构化数据之间的数据，它是结构化数据的一种形式，虽然不符合二维逻辑这种数据模型结构，但是包含相关标记，用来分割语义元素以及对记录和字段进行分层。常见的半结构化数据有XML和JSON</p>
+<h2 id="常用数据库的使用">
+<span class="mr-2"><strong><em>*常用数据库的使用*</em></strong></span><a href="#%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p><strong>RDBMS数据库</strong></p>
+<p><strong>特点：</strong></p>
+<p>- o- 高度组织化结构化数据</p>
+<p>- o- 结构化查询语言（SQL）</p>
+<p>- o- 数据和关系都存储在单独的表中。</p>
+<p>- o- 数据操纵语言，数据定义语言</p>
+<p>- o- 严格的一致性</p>
+<p>- o- 基础事务</p>
+<p><strong>NoSQL数据库（Not Only SQL）</strong></p>
+<p>泛指非关系型数据库，是对关系型数据库的一种补充</p>
+<p><strong>特点：</strong></p>
+<p>l o- 代表着不仅仅是SQL</p>
+<p>l o- 没有声明性查询语言</p>
+<p>l o- 没有预定义的模式</p>
+<p>l o-键 - 值对存储，列存储，文档存储，图形数据库</p>
+<p>l o- 最终一致性，而非ACID属性</p>
+<p>l o- 非结构化和不可预知的数据</p>
+<p>l o- CAP定理</p>
+<p>l o- 高性能，高可用性和可伸缩性</p>
+<h2 id="sqlitemysqlneo4j">
+<span class="mr-2"><strong><em>*SQLite、MySQL、Neo4j*</em></strong></span><a href="#sqlitemysqlneo4j" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>SQLite:SQLite 是一个软件库，实现了自给自足的、无服务器的、零配置的、事务性的 SQL 数据库引擎。SQLite 是在世界上最广泛部署的 SQL 数据库引擎。SQLite 源代码不受版权限制。</p>
+<p>MySQL:MySQL 是一种关联数据库管理系统，关联数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。</p>
+<p>Neo4j:Neo4j是一个高性能的NOSQL图形数据库，它将结构化数据存储在网络上而不是表中。它是一个嵌入式的、基于磁盘的、具备完全的事务特性的Java持久化引擎，但是它将结构化数据存储在网络(从数学角度叫做图)上而不是表中。Neo4j也可以被看作是一个高性能的图引擎，该引擎具有成熟数据库的所有特性。</p>
+<h2 id="有关数据库的连接方法">
+<span class="mr-2"><strong><em>*有关数据库的连接方法*</em></strong></span><a href="#%E6%9C%89%E5%85%B3%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%96%B9%E6%B3%95" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p><strong>Sqoop</strong>是一个用来将Hadoop和关系型数据库中的数据相互转移的工具，可以将一个关系型数据库（例如 ： MySQL ,Oracle ,Postgres等）中的数据导入到Hadoop的HDFS中，也可以将HDFS的数据导入到关系型数据库中。</p>
+<p><a href="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps25.jpg" class="popup img-link "><img data-src="/assets/blog_res/2023-11-10-%E6%96%87%E6%A1%88.assets/wps25.jpg" alt="img" class="lazyload" data-proofer-ignore></a></p>
+<p><strong>hive</strong>是基于Hadoop的一个数据仓库工具，用来进行数据提取、转化、加载</p>
+<p>hive的优点是学习成本低，hive十分适合对数据仓库进行统计分析。</p>
+<h1 id="ch7云平台可视化开发平台"><strong><em>*ch7云平台可视化开发平台*</em></strong></h1>
+<p>云计算分类：SAAS PAAS IAAS</p>
+<p>DLV的特点：</p>
+<p>o（1）丰富多样的可视化组件</p>
+<p>o（2）可视化编辑器</p>
+<p>o（3）专业级地理信息可视化</p>
+<p>o（4）多种数据源支持</p>
+<h1 id="ch9空间信息可视化技术"><strong><em>*ch9空间信息可视化技术*</em></strong></h1>
+<p>空间信息：反映地理实体空间分布特征的信息</p>
+<p>空间分布特征：实体的位置、形状及实体间的空间关系、区域空间结构等</p>
+<p>空间信息可视化形式：地图、多媒体地学信息、三维仿真地图和虚拟环境等</p>
+<p>AR全称Augmented Reality，即增强现实技术</p>
+<p>VR全称Virtual Reality，即虚拟现实技术，又称灵境技术，具有沉浸性、交互性和构想性特征</p>
+<p>MR全称Mixed Reality，即混合现实技术，是虚拟现实技术的进一步发展。它是通过在虚拟环境中引入现实场景信息，将虚拟世界、现实世界和用户之间搭起一个交互反馈信息的桥梁</p>
+<p>空间数据类型——GeoJSON</p>
+<p>点要素 多点 线要素 多线要素 多边形 多个多边形</p>
+<p>o线要素就是指线段，记录的是线的端点坐标，可视化时会按照记录顺序联结。</p>
+<p>多边形Polygon，单个多边形是一个3维数组，可以包含多个二维数组，这种情况和MultiPolygon效果类似。存的也是点 点连起来构成多边形</p>
+<p><strong>PyMOL</strong>适用于创作高品质的小分子或是生物大分子（特别是蛋白质）的三维结构图像，文件格式为PDB</p>
+</div>
+<div class="post-tail-wrapper text-muted">
+<div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/">学习资料</a>
+</div>
+<div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/study/" class="post-tag no-text-decoration">study</a>
+</div>
+<div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
+<div class="license-wrapper"> 本文由作者按照 <a href="https://creat-king.github.io/"> CC BY 4.0 </a> 进行授权，转载请注明来自：Creat-King</div>
+<div class="share-wrapper"> <span class="share-label text-muted mr-1">分享</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0%20-%20%E7%82%B8%E4%B8%B2%E5%84%BF%E7%9A%84%E5%B0%8F%E5%B1%8B&url=%2Fposts%2F%25E6%2596%2587%25E6%25A1%2588%2F" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0%20-%20%E7%82%B8%E4%B8%B2%E5%84%BF%E7%9A%84%E5%B0%8F%E5%B1%8B&u=%2Fposts%2F%25E6%2596%2587%25E6%25A1%2588%2F" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://t.me/share/url?url=%2Fposts%2F%25E6%2596%2587%25E6%25A1%2588%2F&text=%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0%20-%20%E7%82%B8%E4%B8%B2%E5%84%BF%E7%9A%84%E5%B0%8F%E5%B1%8B" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i id="copy-link" class="fa-fw fas fa-link small" data-toggle="tooltip" data-placement="top" title="分享链接" data-title-succeed="链接已复制！"> </i> </span>
+</div>
+</div>
+</div>
+</div></div>
+<div id="panel-wrapper" class="col-xl-3 pl-2 text-muted">
+<div class="access">
+<div id="access-lastmod" class="post">
+<div class="panel-heading">最近更新</div>
+<ul class="post-content pl-0 pb-1 ml-1 mt-2">
+<li><a href="/posts/hello-world/">test！</a></li>
+<li><a href="/posts/%E6%96%87%E6%A1%88/">大数据可视化考试复习</a></li>
+<li><a href="/posts/%E7%89%A9%E8%81%94%E7%BD%91%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/">物联网考试复习总结</a></li>
+</ul>
+</div>
+<div id="access-tags">
+<div class="panel-heading">热门标签</div>
+<div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/study/">study</a> <a class="post-tag" href="/tags/%E7%94%9F%E6%B4%BB/">生活</a>
+</div>
+</div>
+</div>
+<div id="toc-wrapper" class="pl-0 pr-4 mb-5">
+<div class="panel-heading pl-3 pt-2 mb-2">文章内容</div>
+<nav id="toc"></nav>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/tocbot@4.20.1/dist/tocbot.min.js"></script>
+</div>
+</div>
+<div class="row"><div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 pl-3 pr-3 pr-xl-4 mt-5">
+<div id="related-posts" class="mb-2 mb-sm-4">
+<h3 class="pt-2 mb-4 ml-1" data-toc-skip>相关文章</h3>
+<div class="card-deck mb-4">
+<div class="card"> <a href="/posts/%E7%89%A9%E8%81%94%E7%BD%91%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/"><div class="card-body"> <em class="small" data-ts="1702375440" data-df="YYYY/MM/DD"> 2023/12/12 </em><h3 class="pt-0 mt-1 mb-3" data-toc-skip>物联网考试复习总结</h3>
+<div class="text-muted small"><p> ch1绪论 绿野千传：对以碳汇和碳排放为中心的地球环境进行长期大规模监测，全球规模最大、运行时间最长的传感网络应用系统之一 ==群智感知：== 基本思想：大量普通用户使用移动设备作为基本感知单元，通过移动互联网进行协作，实现感知任务分发和感知数据收集利用，最终完成大规模、复杂的社会感知任务 ==核心理念：有意识部署与无意识协作结合== 社会感知任务的特点：范围广、规模...</p></div>
+</div></a>
+</div>
+<div class="card"> <a href="/posts/hello-world/"><div class="card-body"> <em class="small" data-ts="1648262040" data-df="YYYY/MM/DD"> 2022/03/26 </em><h3 class="pt-0 mt-1 mb-3" data-toc-skip>test！</h3>
+<div class="text-muted small"><p> 毫米波雷达体征信号监测算法汇总 传统信号处理方法 算法类别 具体算法 算法描述 开源代码情况 代表性论文 论文年份 **FFT系列** FFT 快速傅里叶变换提取频域特征 ✅ MATLAB/Python通用 ...</p></div>
+</div></a>
+</div>
+</div>
+</div>
+<div class="post-navigation d-flex justify-content-between"> <a href="/posts/hello-world/" class="btn btn-outline-primary" prompt="上一篇"><p>test！</p></a> <a href="/posts/%E7%89%A9%E8%81%94%E7%BD%91%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/" class="btn btn-outline-primary" prompt="下一篇"><p>物联网考试复习总结</p></a>
+</div>
+</div></div>
+</div>
+<div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content">
+<div id="search-hints"><div id="access-tags">
+<div class="panel-heading">热门标签</div>
+<div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/study/">study</a> <a class="post-tag" href="/tags/%E7%94%9F%E6%B4%BB/">生活</a>
+</div>
+</div></div>
+<div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
+</div></div>
+</div>
+<footer><div class="container pl-lg-4 pr-lg-4"><div class="d-flex justify-content-between align-items-center text-muted ml-md-3 mr-md-3">
+<div class="footer-left"><p class="mb-0"> © 2025 <a href="https://twitter.com/username">Creat-King</a>. <span data-toggle="tooltip" data-placement="top" title="除非另有说明，本网站上的博客文章均由作者按照知识共享署名 4.0 国际 (CC BY 4.0) 许可协议进行授权。">保留部分权利。</span></p></div>
+<div class="footer-right"><p class="mb-0">本站由 <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> 生成，采用 <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a> 主题。</p></div>
+</div></div></footer><script src="https://cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js"></script> <script> (function () { function updateMermaid(event) { if (event.source === window && event.data && event.data.direction === ModeToggle.ID) { const mode = event.data.message; if (typeof mermaid === "undefined") { return; } let expectedTheme = (mode === ModeToggle.DARK_MODE ? "dark" : "default"); let config = {theme: expectedTheme}; /* Re-render the SVG › <https://github.com/mermaid-js/mermaid/issues/311#issuecomment-332557344> */ $(".mermaid").each(function () { let svgCode = $(this).prev().children().html(); $(this).removeAttr("data-processed"); $(this).html(svgCode); }); mermaid.initialize(config); mermaid.init(undefined, ".mermaid"); } } let initTheme = "default"; if ($("html[data-mode=dark]").length > 0 || ($("html[data-mode]").length == 0 && window.matchMedia("(prefers-color-scheme: dark)").matches)) { initTheme = "dark"; } let mermaidConf = { theme: initTheme /* <default|dark|forest|neutral> */ }; /* Create mermaid tag */ $("pre").has("code.language-mermaid").each(function () { let svgCode = $(this).children().html(); $(this).addClass("unloaded"); $(this).after(`<pre class=\"mermaid\">${svgCode}</pre>`); }); mermaid.initialize(mermaidConf); window.addEventListener("message", updateMermaid); })(); </script><div id="mask"></div>
+<a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">搜索结果为空</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script> <script src="https://cdn.jsdelivr.net/combine/npm/magnific-popup@1/dist/jquery.magnific-popup.min.js,npm/lazysizes@5.3.2/lazysizes.min.js,npm/clipboard@2/dist/clipboard.min.js"></script> <script src="https://cdn.jsdelivr.net/combine/npm/dayjs@1/dayjs.min.js,npm/dayjs@1/locale/zh.min.js,npm/dayjs@1/plugin/relativeTime.min.js,npm/dayjs@1/plugin/localizedFormat.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script> <script defer src="/unregister.js"></script>
+</body>
+</html>

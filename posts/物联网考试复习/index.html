@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="物联网考试复习总结">
+<meta name="author" content="zha_chuan_er">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="ch1绪论">
+<meta property="og:description" content="ch1绪论">
+<link rel="canonical" href="/posts/%E7%89%A9%E8%81%94%E7%BD%91%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/">
+<meta property="og:url" content="/posts/%E7%89%A9%E8%81%94%E7%BD%91%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/">
+<meta property="og:site_name" content="炸串儿的小屋">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2023-12-12T10:04:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="物联网考试复习总结">
+<meta name="twitter:site" content="@twitter_username">
+<meta name="twitter:creator" content="@zha_chuan_er"> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"zha_chuan_er"},"dateModified":"2023-12-12T13:26:33+00:00","datePublished":"2023-12-12T10:04:00+00:00","description":"ch1绪论","headline":"物联网考试复习总结","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/%E7%89%A9%E8%81%94%E7%BD%91%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/"},"url":"/posts/%E7%89%A9%E8%81%94%E7%BD%91%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/"}</script><title>物联网考试复习总结 | 炸串儿的小屋</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/favicons/site.webmanifest">
+<link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="炸串儿的小屋">
+<meta name="application-name" content="炸串儿的小屋">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&amp;display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.20.1/dist/tocbot.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1/dist/magnific-popup.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> <script type="text/javascript"> class ModeToggle { static get MODE_KEY() { return "mode"; } static get MODE_ATTR() { return "data-mode"; } static get DARK_MODE() { return "dark"; } static get LIGHT_MODE() { return "light"; } static get ID() { return "mode-toggle"; } constructor() { if (this.hasMode) { if (this.isDarkMode) { if (!this.isSysDarkPrefer) { this.setDark(); } } else { if (this.isSysDarkPrefer) { this.setLight(); } } } let self = this; /* always follow the system prefers */ this.sysDarkPrefers.addEventListener('change', () => { if (self.hasMode) { if (self.isDarkMode) { if (!self.isSysDarkPrefer) { self.setDark(); } } else { if (self.isSysDarkPrefer) { self.setLight(); } } self.clearMode(); } self.notify(); }); } /* constructor() */ get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); } get isSysDarkPrefer() { return this.sysDarkPrefers.matches; } get isDarkMode() { return this.mode === ModeToggle.DARK_MODE; } get isLightMode() { return this.mode === ModeToggle.LIGHT_MODE; } get hasMode() { return this.mode != null; } get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); } /* get the current mode on screen */ get modeStatus() { if (this.isDarkMode || (!this.hasMode && this.isSysDarkPrefer)) { return ModeToggle.DARK_MODE; } else { return ModeToggle.LIGHT_MODE; } } setDark() { $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); } setLight() { $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); } clearMode() { $('html').removeAttr(ModeToggle.MODE_ATTR); sessionStorage.removeItem(ModeToggle.MODE_KEY); } /* Notify another plugins that the theme mode has changed */ notify() { window.postMessage({ direction: ModeToggle.ID, message: this.modeStatus }, "*"); } flipMode() { if (this.hasMode) { if (this.isSysDarkPrefer) { if (this.isLightMode) { this.clearMode(); } else { this.setLight(); } } else { if (this.isDarkMode) { this.clearMode(); } else { this.setDark(); } } } else { if (this.isSysDarkPrefer) { this.setLight(); } else { this.setDark(); } } this.notify(); } /* flipMode() */ } /* ModeToggle */ const modeToggle = new ModeToggle(); </script>
+</head>
+<body data-topbar-visible="true">
+<div id="sidebar" class="d-flex flex-column align-items-end">
+<div class="profile-wrapper text-center">
+<div id="avatar"> <a href="/" class="mx-auto"> <img src="/assets/config/avatar.jpg" alt="avatar" onerror="this.style.display='none'"> </a>
+</div>
+<div class="site-title"> <a href="/">炸串儿的小屋</a>
+</div>
+<div class="site-subtitle font-italic">这里是炸串儿的小屋 ～</div>
+</div>
+<ul class="w-100">
+<li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>首页</span> </a>
+</li>
+<li class="nav-item"> <a href="/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>分类</span> </a>
+</li>
+<li class="nav-item"> <a href="/tags/" class="nav-link"> <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i> <span>标签</span> </a>
+</li>
+<li class="nav-item"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>归档</span> </a>
+</li>
+<li class="nav-item"> <a href="/about/" class="nav-link"> <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i> <span>关于</span> </a>
+</li>
+</ul>
+<div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center"> <button class="mode-toggle btn" aria-label="Switch Mode"> <i class="fas fa-adjust"></i> </button> <span class="icon-border"></span> <a href="https://github.com/Creat-King" aria-label="github" target="_blank" rel="noopener noreferrer"> <i class="fab fa-github"></i> </a> <a href="https://twitter.com/twitter_username" aria-label="twitter" target="_blank" rel="noopener noreferrer"> <i class="fab fa-twitter"></i> </a> <a href="javascript:location.href%20=%20'mailto:'%20+%20['paipchao','gmail.com'].join('@')" aria-label="email"> <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" aria-label="rss"> <i class="fas fa-rss"></i> </a>
+</div>
+</div>
+<div id="topbar-wrapper"><div id="topbar" class="container d-flex align-items-center justify-content-between h-100 pl-3 pr-3 pl-md-4 pr-md-4"> <span id="breadcrumb"> <span> <a href="/"> 首页 </a> </span> <span>物联网考试复习总结</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> 文章</div>
+<i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="搜索..."> </span> <span id="search-cancel">取消</span>
+</div></div>
+<div id="main-wrapper" class="d-flex justify-content-center">
+<div id="main" class="container pl-xl-4 pr-xl-4">
+<div class="row">
+<div id="core-wrapper" class="col-12 col-lg-11 col-xl-9 pr-xl-4"><div class="post pl-1 pr-1 pl-md-2 pr-md-2">
+<h1 data-toc-skip>物联网考试复习总结</h1>
+<div class="post-meta text-muted"> <span> 发表于 <em class="" data-ts="1702375440" data-df="YYYY/MM/DD" data-toggle="tooltip" data-placement="bottom"> 2023/12/12 </em> </span> <span> 更新于 <em class="" data-ts="1702387593" data-df="YYYY/MM/DD" data-toggle="tooltip" data-placement="bottom"> 2023/12/12 </em> </span><div class="d-flex justify-content-between"> <span> 作者 <em> <a href=""></a> </em> </span><div> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="3808 字"> <em>21 分钟</em>阅读</span>
+</div>
+</div>
+</div>
+<div class="post-content">
+<h1 id="ch1绪论">ch1绪论</h1>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231117210534345.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231117210534345.png" alt="image-20231117210534345" class="lazyload" data-proofer-ignore></a></p>
+<p>绿野千传：对以碳汇和碳排放为中心的地球环境进行长期大规模监测，全球规模最大、运行时间最长的传感网络应用系统之一</p>
+<p>==群智感知：==</p>
+<ol>
+<li>基本思想：大量普通用户使用移动设备作为基本感知单元，通过移动互联网进行协作，实现感知任务分发和感知数据收集利用，最终完成大规模、复杂的社会感知任务</li>
+<li>==核心理念：有意识部署与无意识协作结合==</li>
+<li>社会感知任务的特点：<strong>范围广、规模大、任务重</strong>
+</li>
+<li>
+<strong>众包（Crowdsourcing)：</strong> 企 业 利 用 互 联 网 将 工 作 分 配 出 去 、 发 现 创 意 或 解决 技 术 问 题 。 通 过 互 联 网 ， 这 些 企 业 可 以 利 用 大 量用 户 的 创 意 和 能 力 。</li>
+<li>案例分析：城市交通感知（公交车到站时间预测） 无线室内定位：利用手机采集的用户移动性信息构建信号指纹空间</li>
+</ol>
+<p>==什么是无需传感器感知：==</p>
+<p>==物联网、大数据和人工智能的关系：==</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231129000524399.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231129000524399.png" alt="image-20231129000524399" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231117214524698.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231117214524698.png" alt="image-20231117214524698" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231117214540603.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231117214540603.png" alt="image-20231117214540603" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231117214744365.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231117214744365.png" alt="image-20231117214744365" class="lazyload" data-proofer-ignore></a></p>
+<h1 id="ch2无线局域网">ch2无线局域网</h1>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231117214945153.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231117214945153.png" alt="image-20231117214945153" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231117214958498.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231117214958498.png" alt="image-20231117214958498" class="lazyload" data-proofer-ignore></a></p>
+<h2 id="无线局域网体系结构">
+<span class="mr-2">无线局域网体系结构</span><a href="#%E6%97%A0%E7%BA%BF%E5%B1%80%E5%9F%9F%E7%BD%91%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>无线局域网物理组成：</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231117223849610.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231117223849610.png" alt="image-20231117223849610" class="lazyload" data-proofer-ignore></a></p>
+<h2 id="无线局域网的拓扑结构">
+<span class="mr-2">无线局域网的拓扑结构</span><a href="#%E6%97%A0%E7%BA%BF%E5%B1%80%E5%9F%9F%E7%BD%91%E7%9A%84%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<h3 id="1分布对等式拓扑">
+<span class="mr-2">1.分布对等式拓扑</span><a href="#1%E5%88%86%E5%B8%83%E5%AF%B9%E7%AD%89%E5%BC%8F%E6%8B%93%E6%89%91" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<ul>
+<li>是一种独立的BSS，至少有两个站</li>
+<li>自组织网络（Ad HOC network）</li>
+<li>不需AP，各站之间的关系是对等的、分布式的、无中心的</li>
+</ul>
+<h3 id="2基础结构集中式拓扑">
+<span class="mr-2">2.基础结构集中式拓扑</span><a href="#2%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84%E9%9B%86%E4%B8%AD%E5%BC%8F%E6%8B%93%E6%89%91" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<ul>
+<li>需要包括：<ol>
+<li>分布式系统媒体（DSM）</li>
+<li>至少一个AP（接入点），用来转发BSS内通信</li>
+<li>端口实体</li>
+</ol>
+</li>
+<li>抗毁性差</li>
+<li>传输时延增加：BSS内两个站点通信需要AP转发</li>
+<li><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119222816966.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119222816966.png" alt="image-20231119222816966" class="lazyload" data-proofer-ignore></a></li>
+</ul>
+<h3 id="3ess扩展服务组网络拓扑">
+<span class="mr-2">3.ESS（扩展服务组）网络拓扑</span><a href="#3ess%E6%89%A9%E5%B1%95%E6%9C%8D%E5%8A%A1%E7%BB%84%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<ul>
+<li>ESA是由多个BSA通过DS（分配系统）联结形成的一个扩展区域</li>
+<li>ESS是由属于同一个ESA的所有站组成，ESS由多个BSS组成</li>
+</ul>
+<h3 id="4中继或桥接型网络拓扑">
+<span class="mr-2">4.中继或桥接型网络拓扑</span><a href="#4%E4%B8%AD%E7%BB%A7%E6%88%96%E6%A1%A5%E6%8E%A5%E5%9E%8B%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<ul>
+<li>两个或多个网络(LAN或WLAN)或网段通过无线中继器、无线网桥或无线路由器等无线网络互连设备连接起来。（单跳或多跳）</li>
+<li>采用中继或桥接型网络拓扑是一种拓展WLAN覆盖范围的有效方法。</li>
+</ul>
+<p>==不重叠的传输信道：==1、6、11</p>
+<h2 id="无线局域网的mac协议">
+<span class="mr-2">无线局域网的MAC协议</span><a href="#%E6%97%A0%E7%BA%BF%E5%B1%80%E5%9F%9F%E7%BD%91%E7%9A%84mac%E5%8D%8F%E8%AE%AE" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<h3 id="1csmacd协议碰撞检测">
+<span class="mr-2">1.CSMA|CD协议（碰撞检测）</span><a href="#1csmacd%E5%8D%8F%E8%AE%AE%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119231738150.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119231738150.png" alt="image-20231119231738150" class="lazyload" data-proofer-ignore></a></p>
+<p>无线局域网不能照搬CSMA/CD协议，会出现以下问题无法解决</p>
+<p>1.隐藏终端问题</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119232253192.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119232253192.png" alt="image-20231119232253192" class="lazyload" data-proofer-ignore></a></p>
+<p>2.暴露终端问题</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119232329443.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119232329443.png" alt="image-20231119232329443" class="lazyload" data-proofer-ignore></a></p>
+<h3 id="2rtscts-机制解决隐藏终端问题">
+<span class="mr-2">2.RTS/CTS 机制（解决隐藏终端问题）</span><a href="#2rtscts-%E6%9C%BA%E5%88%B6%E8%A7%A3%E5%86%B3%E9%9A%90%E8%97%8F%E7%BB%88%E7%AB%AF%E9%97%AE%E9%A2%98" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119233526567.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119233526567.png" alt="image-20231119233526567" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119233536449.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119233536449.png" alt="image-20231119233536449" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119233607164.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119233607164.png" alt="image-20231119233607164" class="lazyload" data-proofer-ignore></a></p>
+<p>——————————————————————————————————————————————————————————————</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119233622625.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119233622625.png" alt="image-20231119233622625" class="lazyload" data-proofer-ignore></a></p>
+<p>==无法解决暴露终端问题==</p>
+<blockquote><p>总而言之就是RTS或CTS会和已建立起来的传输通道里的data发生碰撞，导致新的传输通道无法建立</p></blockquote>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119234224527.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119234224527.png" alt="image-20231119234224527" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119234235882.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231119234235882.png" alt="image-20231119234235882" class="lazyload" data-proofer-ignore></a></p>
+<h3 id="3csmaca冲突避免">
+<span class="mr-2">3.CSMA|CA（冲突避免）</span><a href="#3csmaca%E5%86%B2%E7%AA%81%E9%81%BF%E5%85%8D" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<p>1.物理载波监听：通过收到的相对信号强度是否超过一定的门限数值就可判定是否有其他的移动站在信道上发送数据。</p>
+<p>2.虚拟载波监听：虚拟载波监听”是表示其他站并没有监听信道，而是由于其他站收到了“源站的通知”才不发送数据。</p>
+<p>所谓“源站的通知”就是源站在其MAC帧首部中的第二个字段“持续时间”中填入了在本帧结束后还要占用信道多少时间，包括目的站发送确认帧所需的时间。</p>
+<p>==如何实现冲突避免：==</p>
+<ul>
+<li>优先级确认协议</li>
+<li>随机后退算法</li>
+</ul>
+<p>==优先级由帧间间隔决定：IFS越短，优先级越高==</p>
+<ul>
+<li>SIFS（short interframe space）：最短的IFS，被用于所有立即响应的动作中</li>
+<li>PIFS（点协调功能IFS）：一个中间长度的IFS</li>
+<li>DIFS（分布式协调功能IFS）：最长的IFS</li>
+</ul>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231120110314435.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231120110314435.png" alt="image-20231120110314435" class="lazyload" data-proofer-ignore></a></p>
+<p><strong>争用窗口</strong>：信道从忙态变为空闲时，任何一个站要发送数据帧时，不仅都必须等待一个DIFS的间隔，还要进入争用窗口，并计算随机退避时间以便再次重新试图接入到信道。</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231120110625326.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231120110625326.png" alt="image-20231120110625326" class="lazyload" data-proofer-ignore></a></p>
+<p>竞争窗口类比信道数目，选择同一个信道会发生冲突，那么将扩大竞争窗口</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231120110816420.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231120110816420.png" alt="image-20231120110816420" class="lazyload" data-proofer-ignore></a></p>
+<p>PCF（点协调功能方式）和DCF（分布式协调功能方式）</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231120111215016.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231120111215016.png" alt="image-20231120111215016" class="lazyload" data-proofer-ignore></a></p>
+<h3 id="4mac层主要功能">
+<span class="mr-2">4.MAC层主要功能</span><a href="#4mac%E5%B1%82%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<ul>
+<li>媒体访问控制</li>
+<li>加入网络连接</li>
+<li>数据验证和保密</li>
+</ul>
+<p>==分贝与功率的关系：==</p>
+<p>100mw=10*lg100 db</p>
+<h3 id="5zigzag算法解决隐藏终端问题">
+<span class="mr-2">5.ZigZag算法（解决隐藏终端问题）</span><a href="#5zigzag%E7%AE%97%E6%B3%95%E8%A7%A3%E5%86%B3%E9%9A%90%E8%97%8F%E7%BB%88%E7%AB%AF%E9%97%AE%E9%A2%98" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<p>缺点：如果有几位发送错误 那么后续将会带来更多错误，错误会传播，类似多米诺效益</p>
+<ul>
+<li>重传机制</li>
+<li>发送端随机抖动</li>
+</ul>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002406187.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002406187.png" alt="image-20231130002406187" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002420612.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002420612.png" alt="image-20231130002420612" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002429455.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002429455.png" alt="image-20231130002429455" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002443631.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002443631.png" alt="image-20231130002443631" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002453145.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002453145.png" alt="image-20231130002453145" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002502985.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002502985.png" alt="image-20231130002502985" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002511928.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002511928.png" alt="image-20231130002511928" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002522589.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002522589.png" alt="image-20231130002522589" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002531394.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130002531394.png" alt="image-20231130002531394" class="lazyload" data-proofer-ignore></a></p>
+<p>缺点：如果有几位发送错误 那么后续将会带来更多错误，错误会传播，类似多米诺效益</p>
+<p>如何解决：正向和反向两次解析，如果相同则没发生错误，如果不同则选择其中一个结果</p>
+<p>选择哪一个呢？For each bit, AP picks the decoding that has ahigher PHY confidence。对于每个比特，ap选择具有较高phy置信度的解码</p>
+<h2 id="无线局域网的部署">
+<span class="mr-2">无线局域网的部署</span><a href="#%E6%97%A0%E7%BA%BF%E5%B1%80%E5%9F%9F%E7%BD%91%E7%9A%84%E9%83%A8%E7%BD%B2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>fat AP ：AP中存储安全配置信息</p>
+<p>thin AP：AP中不存储配置参数，只是实现无线电波的收发功能</p>
+<p>第一代无线局域网：Fat AP 第二代无线局域网：Thin AP+AC（无线控制器）</p>
+<h1 id="ch3无线传感器网络">ch3无线传感器网络</h1>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231121230440750-17005790817841.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231121230440750-17005790817841.png" alt="image-20231121230440750" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231121230518022.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231121230518022.png" alt="image-20231121230518022" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231121231602267.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231121231602267.png" alt="image-20231121231602267" class="lazyload" data-proofer-ignore></a></p>
+<h2 id="1什么是无线传感网">
+<span class="mr-2">1.什么是无线传感网</span><a href="#1%E4%BB%80%E4%B9%88%E6%98%AF%E6%97%A0%E7%BA%BF%E4%BC%A0%E6%84%9F%E7%BD%91" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>无线传感网通常包括传感器节点、汇聚节点和管理节点</p>
+<p>无线传感网由大量微型传感器节点组成，通过无线通信方式形成的一个多跳的自组织网络系统</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231121233828242.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231121233828242.png" alt="image-20231121233828242" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231121233856115.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231121233856115.png" alt="image-20231121233856115" class="lazyload" data-proofer-ignore></a></p>
+<blockquote>
+<p>==传感网与无线网的区别==：</p>
+<ol>
+<li>传感网节点数目更庞大、分布更密集，节点更容易出现故障</li>
+<li>环境干扰和节点故障容易造成传感网网络拓扑结构的变化</li>
+<li>大多数传感器节点固定不动</li>
+<li>传感器节点具有的能量、处理能力和通信能力十分有限</li>
+<li>无线网的首要设计目标是提供高服务质量和高效带宽利用，其次才考虑节约能源</li>
+<li>传感网首要设计目标是能源的高效利用</li>
+</ol>
+<p>==传感网特征：==</p>
+<ol>
+<li>大规模</li>
+<li>自组织性</li>
+<li>动态性</li>
+<li>可靠</li>
+<li>与应用相关</li>
+</ol>
+<p>==传感节点的特点==：</p>
+<ol>
+<li>临近的传感节点拥有相似的数据</li>
+<li>传感节点没有全局ID</li>
+</ol>
+<p>==传感节点的限制==：</p>
+<ol>
+<li>电源能量有限</li>
+<li>计算和存储能力有限</li>
+<li>通信能力有限<ul>
+<li>能量消耗与距离有关 E=kd的n次，n一般取3</li>
+<li>节点的通信带宽有限</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<h2 id="2无线传感网的应用">
+<span class="mr-2">2.无线传感网的应用</span><a href="#2%E6%97%A0%E7%BA%BF%E4%BC%A0%E6%84%9F%E7%BD%91%E7%9A%84%E5%BA%94%E7%94%A8" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<ul>
+<li>医院病房电子巡检</li>
+<li>智慧农业</li>
+<li>智能家居</li>
+</ul>
+<h2 id="3无线传感网体系结构">
+<span class="mr-2">3.无线传感网体系结构</span><a href="#3%E6%97%A0%E7%BA%BF%E4%BC%A0%E6%84%9F%E7%BD%91%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>传感器网络分类：</p>
+<ol>
+<li>先应式网络：节点定期打开传感器和发送器，感测环境并将数据发送出去</li>
+<li>反应式网络：节点根据用户发来的查询命令给予立即响应</li>
+</ol>
+<p>传感器网络查询分类：</p>
+<ol>
+<li>历史查询</li>
+<li>一次查询：瞬时状态的查询</li>
+<li>持续查询</li>
+</ol>
+<p>传感网络体系结构分类</p>
+<ol>
+<li>
+<p>层次</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231122225117536.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231122225117536.png" alt="image-20231122225117536" class="lazyload" data-proofer-ignore></a></p>
+<p><strong>层次型架构的问题</strong></p>
+<p>能量空洞问题：距离基站越近的结点，能耗越多，距离基站进的结点能力耗光之后，整个网络形成了一个空洞，外部结点虽然有能量，但是已经无法把结点传播给基站了</p>
+</li>
+<li>
+<p>分簇</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231122225144296.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231122225144296.png" alt="image-20231122225144296" class="lazyload" data-proofer-ignore></a></p>
+</li>
+</ol>
+<p>通信中存在两个现象:</p>
+<p>内部爆炸(Implosion)：重复消息来自许多邻居</p>
+<p>数据重叠(overlap)：同样的事件被交叉覆盖的多个节点感知并发送</p>
+<p>内部爆炸和数据重叠，都会导致网络资源的浪费</p>
+<p><strong>==一些算法==</strong>：：：看看PPT</p>
+<p>数据搜集算法</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231122225841761.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231122225841761.png" alt="image-20231122225841761" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231122225857119.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231122225857119.png" alt="image-20231122225857119" class="lazyload" data-proofer-ignore></a></p>
+<h2 id="天线距离计算题">
+<span class="mr-2">天线距离计算题</span><a href="#%E5%A4%A9%E7%BA%BF%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E9%A2%98" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231122232059747.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231122232059747.png" alt="image-20231122232059747" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231122232117521.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231122232117521.png" alt="image-20231122232117521" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231122232135304.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231122232135304.png" alt="image-20231122232135304" class="lazyload" data-proofer-ignore></a></p>
+<h2 id="4定位技术">
+<span class="mr-2">4.定位技术</span><a href="#4%E5%AE%9A%E4%BD%8D%E6%8A%80%E6%9C%AF" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>信标节点：已知自己的坐标，也叫锚点</p>
+<h3 id="41无需测距的定位技术">
+<span class="mr-2">4.1无需测距的定位技术</span><a href="#41%E6%97%A0%E9%9C%80%E6%B5%8B%E8%B7%9D%E7%9A%84%E5%AE%9A%E4%BD%8D%E6%8A%80%E6%9C%AF" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<h4 id="1质心算法">
+<span class="mr-2">1.质心算法</span><a href="#1%E8%B4%A8%E5%BF%83%E7%AE%97%E6%B3%95" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h4>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231123222637098.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231123222637098.png" alt="image-20231123222637098" class="lazyload" data-proofer-ignore></a></p>
+<p>基本过程：</p>
+<ol>
+<li>信标节点周期性向邻近节点广播信标分组，信标分组中包含信标节点的标识号和位置信息；</li>
+<li>
+<strong>当未知节点接收到来自不同信标节点的信标分组数量超过某一个门限k或接收一定时间后</strong>，就确定自身位置为这些信标节点所组成的多边形的质心。</li>
+</ol>
+<h4 id="2dv-hop算法">
+<span class="mr-2">2.DV-Hop算法</span><a href="#2dv-hop%E7%AE%97%E6%B3%95" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h4>
+<p>基本思想：</p>
+<ol>
+<li>首先，计算未知节点与信标节点的最小跳数</li>
+<li>然后，估计平均每跳距离，利用最小跳数乘平均每跳距离，得到未知节点与信标节点之间的==估计距离==</li>
+<li>最后，利用三边测量法或极大似然估计法计算未知节点的坐标</li>
+</ol>
+<p>阶段一：计算==最小跳数==：</p>
+<p>接收节点记录到每个信标节点的最小跳数，忽略来自同一个信标节点的较大跳数分组。然后将跳数值加1，并转发给邻居节点</p>
+<p>阶段二：估计平均跳段距离</p>
+<p>利用信标节点之间的已知信息去计算。</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231125164751140-17009020721641.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231125164751140-17009020721641.png" alt="image-20231125164751140" class="lazyload" data-proofer-ignore></a></p>
+<p>HopSize：以该信标节点为中心的距离和/最小跳数和，得到该信标节点发出的平均跳段距离</p>
+<p>未知节点仅记录接收到的第一个每跳平均距离（即从最近的信标节点发出的，最近==跳数最少）</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231125165555397.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231125165555397.png" alt="image-20231125165555397" class="lazyload" data-proofer-ignore></a></p>
+<p>阶段三：</p>
+<p>根据未知节点到各个信标节点的距离，利用<strong>三边测量法或极大似然估计法</strong>计算自身坐标</p>
+<p>==三边测量法或极大似然估计法怎么算？？==</p>
+<h4 id="3dv-hop改进">
+<span class="mr-2">3.DV-Hop改进</span><a href="#3dv-hop%E6%94%B9%E8%BF%9B" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h4>
+<p>改进平均每跳距离的计算方法</p>
+<p>原方法：以某信标节点为中心，到其他信标节点的 距离和/最小跳数和<a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231125170952896.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231125170952896.png" alt="image-20231125170952896" class="lazyload" data-proofer-ignore></a></p>
+<p>改进后：利用最小均方误差</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231125171102004.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231125171102004.png" alt="image-20231125171102004" class="lazyload" data-proofer-ignore></a></p>
+<h4 id="4apit算法近似三角形内点测试法">
+<span class="mr-2">4.APIT算法（近似三角形内点测试法）</span><a href="#4apit%E7%AE%97%E6%B3%95%E8%BF%91%E4%BC%BC%E4%B8%89%E8%A7%92%E5%BD%A2%E5%86%85%E7%82%B9%E6%B5%8B%E8%AF%95%E6%B3%95" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h4>
+<p>PIT（假设M为动态点）：假如存在一个方向，沿着这个方向节点M会同时远离或接近参考节点A.B、C，那么节点M位于三角形ABC外部，如图1所示;否则，M位于三角形ABC内部，如图2所示。</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231125172543051.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231125172543051.png" alt="image-20231125172543051" class="lazyload" data-proofer-ignore></a></p>
+<p>APIT（M为静态的）：通过与相邻节点的信息交换来模拟PIT算法</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231125173326691.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231125173326691.png" alt="image-20231125173326691" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231125173425353.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231125173425353.png" alt="image-20231125173425353" class="lazyload" data-proofer-ignore></a></p>
+<p>如何计算重叠区域：</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231125173730401.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231125173730401.png" alt="image-20231125173730401" class="lazyload" data-proofer-ignore></a></p>
+<p>APIT的缺点：</p>
+<p>通过上述分析发现，APIT算法仅仅分析几个有限的方向，而且定位覆盖率 (可实现定位的未知节点数目与总的未知节点数目之比) ==与相邻节点数量及分布密切相关==，因此APIT算法==有时会做出不正确的判断以及存在大量无法定位的节点==。</p>
+<h4 id="5定位相关的其他技术必考计算题rsd">
+<span class="mr-2">5.定位相关的其他技术（必考计算题）RSD</span><a href="#5%E5%AE%9A%E4%BD%8D%E7%9B%B8%E5%85%B3%E7%9A%84%E5%85%B6%E4%BB%96%E6%8A%80%E6%9C%AF%E5%BF%85%E8%80%83%E8%AE%A1%E7%AE%97%E9%A2%98rsd" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h4>
+<p>通过位置序列来定位</p>
+<p>假设：距离越近，信号强度越大，排序越靠前</p>
+<p>相对距离计算：（好像没什么用）</p>
+<ol>
+<li>确定邻居序列并进行排序</li>
+<li>计算序列之间的特征距离</li>
+<li>修正两节点之间的特征距离</li>
+</ol>
+<p>邻居节点序列怎么写：</p>
+<ul>
+<li>基于所接受到信号强度</li>
+<li>从自身开始，降序排列</li>
+<li><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231126220733623.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231126220733623.png" alt="image-20231126220733623" class="lazyload" data-proofer-ignore></a></li>
+</ul>
+<p>邻居序列隐含意义：</p>
+<p>根据前后顺序可知，位于垂直平分线的两侧还是同侧</p>
+<p>==显式不同节点对：==</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231126221048733.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231126221048733.png" alt="image-20231126221048733" class="lazyload" data-proofer-ignore></a></p>
+<p>==隐式不同节点对：==</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231126221258582.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231126221258582.png" alt="image-20231126221258582" class="lazyload" data-proofer-ignore></a></p>
+<p>==疑似不同节点对：==</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231126221337064.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231126221337064.png" alt="image-20231126221337064" class="lazyload" data-proofer-ignore></a></p>
+<p>==特征距离计算：==</p>
+<p>SD=显式不同节点对个数+隐式不同节点对个数+疑似不同节点对个数*0.5</p>
+<p>修正：SD = SD/总对数</p>
+<p>RSD：</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231129232124684.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231129232124684.png" alt="image-20231129232124684" class="lazyload" data-proofer-ignore></a></p>
+<p>12/15*根号6/15</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130232950004.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231130232950004.png" alt="image-20231130232950004" class="lazyload" data-proofer-ignore></a></p>
+<h3 id="42需要测距的定位技术">
+<span class="mr-2">4.2需要测距的定位技术</span><a href="#42%E9%9C%80%E8%A6%81%E6%B5%8B%E8%B7%9D%E7%9A%84%E5%AE%9A%E4%BD%8D%E6%8A%80%E6%9C%AF" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<h4 id="1三边定位和多边定位">
+<span class="mr-2">1.三边定位和多边定位</span><a href="#1%E4%B8%89%E8%BE%B9%E5%AE%9A%E4%BD%8D%E5%92%8C%E5%A4%9A%E8%BE%B9%E5%AE%9A%E4%BD%8D" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h4>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231129004409400.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231129004409400.png" alt="image-20231129004409400" class="lazyload" data-proofer-ignore></a></p>
+<p><strong>基于时间的定位</strong></p>
+<p>怎么考？给数据和案例，学生给出解决方案并求出距离以及坐标</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/1701134712560-90b5d67c-9b8e-4018-81c0-6600404892e8.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/1701134712560-90b5d67c-9b8e-4018-81c0-6600404892e8.png" alt="image.png" class="lazyload" data-proofer-ignore></a></p>
+<p>TOA：发射机和接收机时间需要严格同步（不容易做到）</p>
+<p>TDOA：需要增加声波模块</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231129234118979.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231129234118979.png" alt="image-20231129234118979" class="lazyload" data-proofer-ignore></a></p>
+<h4 id="2接收信号角度定位">
+<span class="mr-2">2.接收信号角度定位</span><a href="#2%E6%8E%A5%E6%94%B6%E4%BF%A1%E5%8F%B7%E8%A7%92%E5%BA%A6%E5%AE%9A%E4%BD%8D" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h4>
+<h2 id="5典型定位系统">
+<span class="mr-2">5.典型定位系统</span><a href="#5%E5%85%B8%E5%9E%8B%E5%AE%9A%E4%BD%8D%E7%B3%BB%E7%BB%9F" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>看看PPT 感觉不考</p>
+<h2 id="6传感网时间同步机制">
+<span class="mr-2">6.传感网时间同步机制</span><a href="#6%E4%BC%A0%E6%84%9F%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>分布式系统的协同工作需要传感器节点间的时间同步</p>
+<h3 id="1时间同步技术关键问题">
+<span class="mr-2">1.时间同步技术关键问题</span><a href="#1%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5%E6%8A%80%E6%9C%AF%E5%85%B3%E9%94%AE%E9%97%AE%E9%A2%98" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<p>影响时间同步的传输时延：</p>
+<ul>
+<li>发送时间：</li>
+<li>访问时间：</li>
+<li>传送时间：</li>
+<li>传播时间：</li>
+<li>接收时间：</li>
+<li>接受时间：用于处理接收到的报文的时间</li>
+</ul>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128164842531.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128164842531.png" alt="image-20231128164842531" class="lazyload" data-proofer-ignore></a></p>
+<h3 id="2网络时间协议ntp工作原理">
+<span class="mr-2">2.网络时间协议NTP工作原理</span><a href="#2%E7%BD%91%E7%BB%9C%E6%97%B6%E9%97%B4%E5%8D%8F%E8%AE%AEntp%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231127230431800.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231127230431800.png" alt="image-20231127230431800" style="zoom: 50%;" class="lazyload" data-proofer-ignore></a></p>
+<p>可以看出,t、d只与T2T1差值及T3T4差值相关,而<strong>与T2、T3 差值无关</strong>,即最<strong>终的结果与服务器处理请求所需的时间无关</strong>。据此，<strong>客户端即可通过 TIT2T3、T4计算出时差t去调整本地时钟</strong></p>
+<p>==NTP适合因特网，不适用在传感网中，原因如下：==</p>
+<ol>
+<li>传感网链路不稳定，通信易中断</li>
+<li>传感网拓扑结构动态变化，无法手动配置时间服务器</li>
+<li>NTP协议需要其他基础设施协助,ru GPS ，传感网无法实现</li>
+<li>传感网资源有限，需考虑能量消耗</li>
+</ol>
+<h3 id="3rbs基于接收者接收者时间同步协议">
+<span class="mr-2">3.RBS【基于接收者/接收者时间同步协议】</span><a href="#3rbs%E5%9F%BA%E4%BA%8E%E6%8E%A5%E6%94%B6%E8%80%85%E6%8E%A5%E6%94%B6%E8%80%85%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5%E5%8D%8F%E8%AE%AE" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231127232735817.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231127232735817.png" alt="image-20231127232735817" style="zoom:50%;" class="lazyload" data-proofer-ignore></a></p>
+<p>RBS基本思想：</p>
+<p>多个节点接收同一个同步信号，然后多个收到同步信号的<strong>节点之间进行同步</strong>。该算法<strong>消除了同步信号发送一方的时间不确定性</strong>。</p>
+<p>优点：时间同步与MAC层协议分离</p>
+<p>缺点：协议开销大</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231127233444541.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231127233444541.png" alt="image-20231127233444541" class="lazyload" data-proofer-ignore></a></p>
+<h3 id="4tpsn基于发送者接收者时间同步协议">
+<span class="mr-2">4.TPSN【基于发送者/接收者时间同步协议】</span><a href="#4tpsn%E5%9F%BA%E4%BA%8E%E5%8F%91%E9%80%81%E8%80%85%E6%8E%A5%E6%94%B6%E8%80%85%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5%E5%8D%8F%E8%AE%AE" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128165513900.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128165513900.png" alt="image-20231128165513900" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128155814130.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128155814130.png" alt="image-20231128155814130" class="lazyload" data-proofer-ignore></a></p>
+<p>通过基于发送者一接收者的结点对方式，每个结点与上一级的一个结点进行同步，从而<strong>最终所有结点都与根结点实现时间同步</strong>。</p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128161015781.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128161015781.png" alt="image-20231128161015781" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128161216872-17011591377961.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128161216872-17011591377961.png" alt="image-20231128161216872" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128165338207.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128165338207.png" alt="image-20231128165338207" class="lazyload" data-proofer-ignore></a></p>
+<h1 id="ch4新技术">ch4新技术</h1>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128171003137.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128171003137.png" alt="image-20231128171003137" class="lazyload" data-proofer-ignore></a></p>
+<h2 id="1工业互联网和消费互联网的区别">
+<span class="mr-2">1.工业互联网和消费互联网的区别</span><a href="#1%E5%B7%A5%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E5%92%8C%E6%B6%88%E8%B4%B9%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E5%8C%BA%E5%88%AB" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128222649176.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128222649176.png" alt="image-20231128222649176" class="lazyload" data-proofer-ignore></a></p>
+<h2 id="2工业40-vs-工业互联网">
+<span class="mr-2">2.工业4.0 VS 工业互联网</span><a href="#2%E5%B7%A5%E4%B8%9A40-vs-%E5%B7%A5%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p><a href="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128230903931.png" class="popup img-link "><img data-src="/assets/blog_res/%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20231128230903931.png" alt="image-20231128230903931" class="lazyload" data-proofer-ignore></a></p>
+<h2 id="3中国制造2025">
+<span class="mr-2">3.中国制造2025</span><a href="#3%E4%B8%AD%E5%9B%BD%E5%88%B6%E9%80%A02025" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>实现制造业<strong>由大变强</strong>的转变</p>
+<h2 id="4数字孪生">
+<span class="mr-2">4.数字孪生</span><a href="#4%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>数字孪生由三部分组成：</p>
+<ol>
+<li>物理空间的实体产品</li>
+<li>虚拟空间的虚拟产品</li>
+<li>虚实之间的连接数据和信息</li>
+</ol>
+<p>==数字孪生五维模型：==</p>
+<ul>
+<li>物理实体</li>
+<li>虚拟实体</li>
+<li>连接</li>
+<li>孪生数据</li>
+<li>服务</li>
+</ul>
+<blockquote>
+<p>数字孪生车间DTS：</p>
+<p>数字孪生十大领域应用探索：</p>
+</blockquote>
+</div>
+<div class="post-tail-wrapper text-muted">
+<div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/">学习资料</a>
+</div>
+<div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/study/" class="post-tag no-text-decoration">study</a>
+</div>
+<div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
+<div class="license-wrapper"> 本文由作者按照 <a href="https://creat-king.github.io/"> CC BY 4.0 </a> 进行授权，转载请注明来自：Creat-King</div>
+<div class="share-wrapper"> <span class="share-label text-muted mr-1">分享</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=%E7%89%A9%E8%81%94%E7%BD%91%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%20-%20%E7%82%B8%E4%B8%B2%E5%84%BF%E7%9A%84%E5%B0%8F%E5%B1%8B&url=%2Fposts%2F%25E7%2589%25A9%25E8%2581%2594%25E7%25BD%2591%25E8%2580%2583%25E8%25AF%2595%25E5%25A4%258D%25E4%25B9%25A0%2F" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=%E7%89%A9%E8%81%94%E7%BD%91%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%20-%20%E7%82%B8%E4%B8%B2%E5%84%BF%E7%9A%84%E5%B0%8F%E5%B1%8B&u=%2Fposts%2F%25E7%2589%25A9%25E8%2581%2594%25E7%25BD%2591%25E8%2580%2583%25E8%25AF%2595%25E5%25A4%258D%25E4%25B9%25A0%2F" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://t.me/share/url?url=%2Fposts%2F%25E7%2589%25A9%25E8%2581%2594%25E7%25BD%2591%25E8%2580%2583%25E8%25AF%2595%25E5%25A4%258D%25E4%25B9%25A0%2F&text=%E7%89%A9%E8%81%94%E7%BD%91%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%20-%20%E7%82%B8%E4%B8%B2%E5%84%BF%E7%9A%84%E5%B0%8F%E5%B1%8B" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i id="copy-link" class="fa-fw fas fa-link small" data-toggle="tooltip" data-placement="top" title="分享链接" data-title-succeed="链接已复制！"> </i> </span>
+</div>
+</div>
+</div>
+</div></div>
+<div id="panel-wrapper" class="col-xl-3 pl-2 text-muted">
+<div class="access">
+<div id="access-lastmod" class="post">
+<div class="panel-heading">最近更新</div>
+<ul class="post-content pl-0 pb-1 ml-1 mt-2">
+<li><a href="/posts/hello-world/">test！</a></li>
+<li><a href="/posts/%E6%96%87%E6%A1%88/">大数据可视化考试复习</a></li>
+<li><a href="/posts/%E7%89%A9%E8%81%94%E7%BD%91%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/">物联网考试复习总结</a></li>
+</ul>
+</div>
+<div id="access-tags">
+<div class="panel-heading">热门标签</div>
+<div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/study/">study</a> <a class="post-tag" href="/tags/%E7%94%9F%E6%B4%BB/">生活</a>
+</div>
+</div>
+</div>
+<div id="toc-wrapper" class="pl-0 pr-4 mb-5">
+<div class="panel-heading pl-3 pt-2 mb-2">文章内容</div>
+<nav id="toc"></nav>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/tocbot@4.20.1/dist/tocbot.min.js"></script>
+</div>
+</div>
+<div class="row"><div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 pl-3 pr-3 pr-xl-4 mt-5">
+<div id="related-posts" class="mb-2 mb-sm-4">
+<h3 class="pt-2 mb-4 ml-1" data-toc-skip>相关文章</h3>
+<div class="card-deck mb-4">
+<div class="card"> <a href="/posts/%E6%96%87%E6%A1%88/"><div class="card-body"> <em class="small" data-ts="1699604040" data-df="YYYY/MM/DD"> 2023/11/10 </em><h3 class="pt-0 mt-1 mb-3" data-toc-skip>大数据可视化考试复习</h3>
+<div class="text-muted small"><p> *大数据可视化* *题型设置* 7个论述题 56分 不要写的太简单 每章一个知识点（包括云平台） 3个分析设计题 matplot+echarts 4中图表，包括组合叠加 给代码画图形 matplotlib必考子图 matplotlib基本样式，（线形、点型） echarts基本样式 *ch1* 数据可视化的概念：数据可视化是基于计算机图形学原理和图形图像处理技术...</p></div>
+</div></a>
+</div>
+<div class="card"> <a href="/posts/hello-world/"><div class="card-body"> <em class="small" data-ts="1648262040" data-df="YYYY/MM/DD"> 2022/03/26 </em><h3 class="pt-0 mt-1 mb-3" data-toc-skip>test！</h3>
+<div class="text-muted small"><p> 毫米波雷达体征信号监测算法汇总 传统信号处理方法 算法类别 具体算法 算法描述 开源代码情况 代表性论文 论文年份 **FFT系列** FFT 快速傅里叶变换提取频域特征 ✅ MATLAB/Python通用 ...</p></div>
+</div></a>
+</div>
+</div>
+</div>
+<div class="post-navigation d-flex justify-content-between"> <a href="/posts/%E6%96%87%E6%A1%88/" class="btn btn-outline-primary" prompt="上一篇"><p>大数据可视化考试复习</p></a><div class="btn btn-outline-primary disabled" prompt="下一篇"><p>-</p></div>
+</div>
+</div></div>
+</div>
+<div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content">
+<div id="search-hints"><div id="access-tags">
+<div class="panel-heading">热门标签</div>
+<div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/study/">study</a> <a class="post-tag" href="/tags/%E7%94%9F%E6%B4%BB/">生活</a>
+</div>
+</div></div>
+<div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
+</div></div>
+</div>
+<footer><div class="container pl-lg-4 pr-lg-4"><div class="d-flex justify-content-between align-items-center text-muted ml-md-3 mr-md-3">
+<div class="footer-left"><p class="mb-0"> © 2025 <a href="https://twitter.com/username">Creat-King</a>. <span data-toggle="tooltip" data-placement="top" title="除非另有说明，本网站上的博客文章均由作者按照知识共享署名 4.0 国际 (CC BY 4.0) 许可协议进行授权。">保留部分权利。</span></p></div>
+<div class="footer-right"><p class="mb-0">本站由 <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> 生成，采用 <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a> 主题。</p></div>
+</div></div></footer><script src="https://cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js"></script> <script> (function () { function updateMermaid(event) { if (event.source === window && event.data && event.data.direction === ModeToggle.ID) { const mode = event.data.message; if (typeof mermaid === "undefined") { return; } let expectedTheme = (mode === ModeToggle.DARK_MODE ? "dark" : "default"); let config = {theme: expectedTheme}; /* Re-render the SVG › <https://github.com/mermaid-js/mermaid/issues/311#issuecomment-332557344> */ $(".mermaid").each(function () { let svgCode = $(this).prev().children().html(); $(this).removeAttr("data-processed"); $(this).html(svgCode); }); mermaid.initialize(config); mermaid.init(undefined, ".mermaid"); } } let initTheme = "default"; if ($("html[data-mode=dark]").length > 0 || ($("html[data-mode]").length == 0 && window.matchMedia("(prefers-color-scheme: dark)").matches)) { initTheme = "dark"; } let mermaidConf = { theme: initTheme /* <default|dark|forest|neutral> */ }; /* Create mermaid tag */ $("pre").has("code.language-mermaid").each(function () { let svgCode = $(this).children().html(); $(this).addClass("unloaded"); $(this).after(`<pre class=\"mermaid\">${svgCode}</pre>`); }); mermaid.initialize(mermaidConf); window.addEventListener("message", updateMermaid); })(); </script><div id="mask"></div>
+<a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">搜索结果为空</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script> <script src="https://cdn.jsdelivr.net/combine/npm/magnific-popup@1/dist/jquery.magnific-popup.min.js,npm/lazysizes@5.3.2/lazysizes.min.js,npm/clipboard@2/dist/clipboard.min.js"></script> <script src="https://cdn.jsdelivr.net/combine/npm/dayjs@1/dayjs.min.js,npm/dayjs@1/locale/zh.min.js,npm/dayjs@1/plugin/relativeTime.min.js,npm/dayjs@1/plugin/localizedFormat.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script> <script defer src="/unregister.js"></script>
+</body>
+</html>
